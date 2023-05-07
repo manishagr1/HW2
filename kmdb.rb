@@ -105,7 +105,7 @@ movie_3["id_studio"] = studio_1["id"]
 movie_3.save
 
 actor_1 = Actor.new
-actor_1["name"] = "Christian Bale"
+actor_1["actor_name"] = "Christian Bale"
 actor_1.save
 
 actor_2 = Actor.new
@@ -254,7 +254,7 @@ for movie in movies
     mname = movie["movie_title"]
     yr = movie["year"]
     rate = movie["rating"]
-    stu = Studio.find_by({"id" => movie["studio_id"]})["name"]
+    stu = Studio.find_by({"id" => movie["id_studio"]})["name"]
     puts "#{mname} #{yr} #{rate} #{stu}"
 end
 
