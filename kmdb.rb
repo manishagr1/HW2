@@ -257,7 +257,6 @@ for movie in movies
     stu = Studio.find_by({"id" => movie["id_studio"]})["name"]
     puts "#{mname} #{yr} #{rate} #{stu}"
 end
-
 # Prints a header for the cast output
 puts ""
 puts "Top Cast"
